@@ -1,0 +1,28 @@
+.App{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    column-gap: 10px;
+}
+
+.content{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.note{
+    display: block;
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+}
