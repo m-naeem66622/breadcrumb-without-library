@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./Components/Header";
 import {
   Route,
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   useLocation,
 } from "react-router-dom";
