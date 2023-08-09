@@ -7,7 +7,6 @@ function Breadcrumb({ titleCase }) {
 
   const pathsChunk = pathname.split("/").filter(Boolean);
   pathsChunk.unshift("home");
-  console.log(pathsChunk.length);
 
   const pathExtractor = (chunk) => {
     const pathEndsAt = pathname.indexOf(chunk) + chunk.length;
@@ -18,6 +17,8 @@ function Breadcrumb({ titleCase }) {
     if (pathsChunk.length > 4) {
       navigate("/");
     }
+
+    // eslint-disable-next-line
   }, []);
 
   return (

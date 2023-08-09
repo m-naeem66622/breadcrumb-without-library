@@ -1,12 +1,6 @@
-import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Components/Header";
-import {
-  Route,
-  HashRouter as Router,
-  Routes,
-  useLocation,
-} from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Breadcrumb from "./Components/Breadcrumb";
 import DynamicRoute from "./Components/DynamicRoute";
 
@@ -19,14 +13,10 @@ function App() {
   };
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Header />
         <Breadcrumb titleCase={titleCase} />
         <Routes>
-          {/* <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} /> */}
           <Route path="/" element={<DynamicRoute titleCase={titleCase} />} />
           <Route
             path="/:param1"
@@ -43,7 +33,7 @@ function App() {
         </Routes>
 
         <em className="note">
-          You can also type a custom url for more Breadcrumb testing
+          You can also type a custom url for more Breadcrumb testing but only on localhost
         </em>
       </Router>
     </div>
